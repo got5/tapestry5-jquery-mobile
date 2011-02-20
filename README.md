@@ -21,7 +21,7 @@ All kind of feedback is very welcome. Please use [Github issues system](http://g
 
 ## More Informations & contacts
 
-* Twitter: [http://twitter.com/GangOfTapestry5](http://twitter.com/GangOfTapestry5)
+* Twitter: [http://twitter.com/GangOfTapestry5](http://twitter.com/GOTapestry5)
 
 
 ## License
