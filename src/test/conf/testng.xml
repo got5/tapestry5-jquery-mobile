@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="tapestry5-jquery Application Test Suite" annotations="1.5">
+    <test name="JQuery Mobile Integration Tests"  enabled="true">
+    
+        <parameter name="tapestry.web-app-folder" value="src/test/jquery/mobile/webapp"/>
+        <parameter name="browserStartCommand" value="*googlechrome" />
+
+        <classes>
+            <class name="org.got5.tapestry5.jquery.mobile.test.JQueryTest"></class>
+        </classes>
+
+    </test>
+</suite>
