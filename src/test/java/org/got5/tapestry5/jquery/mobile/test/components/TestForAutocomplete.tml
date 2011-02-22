@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<t:container xmlns="http://www.w3.org/1999/xhtml" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+     <t:form t:id="autocompleteForm" id="autocompleteForm">
+        <t:textfield t:value="foo" t:id="foo" t:mixins="autocomplete" />
+        <t:submit t:value="submit" />
+    </t:form>
+</t:container>

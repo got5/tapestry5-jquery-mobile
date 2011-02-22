@@ -14,35 +14,38 @@
 		
 		<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
 			<li data-role="list-divider">Overview</li>
-			<li><a href="/intro" rel="external" t:type="pagelink" t:page="intro">Intro (pageLink rel=external)</a></li>
-			<li><a href="#features">Features (internal page)</a></li>
+			<li><a href="/intro" rel="external" t:type="pagelink" t:page="intro">Intro</a></li>
+			<li><a href="#features">Features</a></li>
 
-			<li><a href="#accessibility">Accessibility (internal page in component)</a></li>
-			<li><a href="#platforms">Supported platforms (internal page in component)</a></li>
+			<li><a href="#accessibility">Accessibility </a></li>
+			<li><a href="#platforms">Supported platforms </a></li>
 		</ul>
 		
 		<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
 			<li data-role="list-divider">API</li>
-			<li><a href="docs/api/globalconfig.html">Configuring defaults</a></li>
-			<li><a href="docs/api/events.html">Events</a></li>
+			<li><a href="http://jquerymobile.com/demos/1.0a3/#docs/api/globalconfig.html">Configuring defaults (jquery site)</a></li>
+			<li><a href="http://jquerymobile.com/demos/1.0a3/#docs/api/events.html">Events (jquery site)</a></li>
 
-			<li><a href="docs/api/methods.html">Methods &amp; Utilities</a></li>
-			<li><a href="docs/api/mediahelpers.html">Responsive Layout</a></li> 
-			<li><a href="docs/api/themes.html">Theme framework</a></li>
+			<li><a href="http://jquerymobile.com/demos/1.0a3/#docs/api/methods.html">Methods &amp; Utilities (jquery site)</a></li>
+			<li><a href="http://jquerymobile.com/demos/1.0a3/#docs/api/mediahelpers.html">Responsive Layout (jquery site)</a></li> 
+			<li><a href="http://jquerymobile.com/demos/1.0a3/#docs/api/themes.html">Theme framework (jquery site)</a></li>
 		</ul>
 		
 		<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
 			<li data-role="list-divider">Components</li>
 
-			<li><a href="docs/pages/index.html">Pages &amp; dialogs</a></li>
-			<li><a href="docs/toolbars/index.html">Toolbars</a></li>
-			<li><a href="docs/buttons/index.html">Buttons</a></li>
-			<li><a href="docs/content/index.html">Content formatting</a></li>
-			<li><a href="docs/forms/index.html">Form elements</a></li>
+			<li><a href="http://jquerymobile.com/demos/1.0a3/#docs/pages/index.html">Pages &amp; dialogs (jquery site)</a></li>
+			<li><a href="toolbars/index" rel="external" t:type="pagelink" t:page="toolbars">Toolbars</a></li>
+			<li><a href="buttons/index" rel="external" t:type="pagelink" t:page="buttons">Buttons</a></li>
+			<li><a href="http://jquerymobile.com/demos/1.0a3/#docs/content/index.html">Content formatting (jquery site) </a></li>
+			<li><a href="http://jquerymobile.com/demos/1.0a3/#docs/forms/index.html" rel="external">Form elements (jquery site)</a></li>
 
 			<li><a href="docs/lists/index.html">List views</a></li>
 		</ul>
-
+		<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
+			<li data-role="list-divider">Tapestry 5.2.4</li>
+		    <li><a href="test_navbar" rel="external">Simple Navbar in action</a></li>
+		</ul>
 	</div>
 </div>
    

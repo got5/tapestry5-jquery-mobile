@@ -1,0 +1,35 @@
+<html t:type="jquery-mobile/Xhtmllayout" t:pageTitle="Toolbars !"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" 
+      xmlns:p="tapestry:parameter">
+      
+
+<div data-role="page" id="toolbars-home">
+
+    <div data-role="header" data-theme="b" >
+        <h1>Toolbars</h1>
+        <a  href="/index" rel="external" t:type="pagelink" t:page="index" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home">Home</a>
+    </div><!-- /header -->
+
+    <div data-role="content">
+
+        <p>Toolbars are used for headers, footers and utility bars throughout a mobile sites and applications, so jQuery Mobile provides a standard set of bars and navigation tools to cover most standard scenarios.</p>
+
+            
+        <ul data-role="listview" data-inset="true">
+            <li><a href="http://jquerymobile.com/demos/1.0a3/#docs/toolbars/docs-bars.html">Toolbar basics (jQuery Site)</a></li>
+            <li><a href="toolbars/docs_headers" rel="external">Header bars</a></li>
+            <li><a href="http://jquerymobile.com/demos/1.0a3/#docs/toolbars/docs-footers.html">Footer bars (jQuery Site)</a></li>
+            <li><a href="#docs_navbar">Navbars</a></li>
+            <li><a href="http://jquerymobile.com/demos/1.0a3/#docs/toolbars/bars-fixed.html">Fixed positioning (jQuery Site)</a></li>
+            <li><a href="http://jquerymobile.com/demos/1.0a3/#docs/toolbars/bars-fullscreen.html">Fullscreen positioning (jQuery Site)</a></li>
+            <li><a href="http://jquerymobile.com/demos/1.0a3/#docs/toolbars/footer-persist-a.html">Persistent footer nav bar (jQuery Site)</a></li>
+            <li><a href="http://jquerymobile.com/demos/1.0a3/#docs/toolbars/bars-themes.html">Theming toolbars (jQuery Site)</a></li>
+            <!--<li><a href="api-bars.html">API documentation</a></li>-->
+        </ul>           
+
+    </div><!-- /content -->
+</div><!-- /page -->
+
+<t:toolbars.docs_navbar/>
+    
+</html>

@@ -1,0 +1,30 @@
+<html t:type="jquery-mobile/Xhtmllayout" t:pageTitle="Toolbars !"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" 
+      xmlns:p="tapestry:parameter">
+      
+
+<div data-role="page" id="buttons-home">
+
+    <div data-role="header" data-theme="b">
+        <h1>Buttons</h1>
+          <a  href="/index" rel="external" t:type="pagelink" t:page="index" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home">Home</a>
+   </div><!-- /header -->
+
+    <div data-role="content">
+        <p>Buttons are core widgets in jQuery Mobile, and are used within a wide range of other plugins.</p>
+        
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#buttons-types">Button markup options</a></li>
+            <li><a href="http://jquerymobile.com/demos/1.0a3/#docs/buttons/buttons-icons.html" rel="external">Button icons (jQuery Site)</a></li>
+            <li><a href="http://jquerymobile.com/demos/1.0a3/#docs/buttons/buttons-inline.html" rel="external">Inline buttons (jQuery Site)</a></li>
+            <li><a href="http://jquerymobile.com/demos/1.0a3/#docs/buttons/buttons-grouped.html" rel="external">Grouped buttons (jQuery Site)</a></li>
+            <li><a href="http://jquerymobile.com/demos/1.0a3/#docs/buttons/buttons-themes.html" rel="external">Theming buttons (jQuery Site)</a></li>
+            <!--<li><a href="api-buttons.html">API documentation</a></li>-->
+        </ul>
+    </div><!-- /ui-body wrapper --> 
+</div><!-- /page -->
+
+
+<t:buttons.buttons_types/>
+    
+</html>
