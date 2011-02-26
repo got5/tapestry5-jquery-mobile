@@ -1,0 +1,36 @@
+<html t:type="jquery-mobile/Xhtmllayout" t:pageTitle="Toolbars !"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" 
+      xmlns:p="tapestry:parameter">
+      
+<div data-role="page">
+
+    <div data-role="header">
+        <h1>jQuery UI's Datepicker Styled for mobile</h1>       
+    </div>
+    
+    <div data-role="content">
+        <p>The included files extend the jQuery UI datepicker to make it suitable for touch devices. 
+        This plugin is not included in jQuery Mobile by default.
+        </p>
+        
+        <t:form t:id="testDate" t:zone="zoneToRefresh">
+        	<t:jquery-mobile.DateFieldMobile t:value="date" />
+			<t:submit t:value="submit" />
+    	</t:form>
+    	
+    	<t:zone t:id="zoneToRefresh">
+        	<t:delegate t:to="BlockForm" />
+    	</t:zone>
+    	
+    	<t:block t:id="blockForm">
+        		<p>
+            		Date value is : ${date}
+        		</p>
+        </t:block>
+        
+
+    </div>
+    
+</div>
+    
+</html>

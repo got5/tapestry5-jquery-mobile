@@ -27,6 +27,7 @@ import org.apache.tapestry5.ioc.OrderedConfiguration;
 import org.apache.tapestry5.services.ComponentClassTransformWorker;
 import org.apache.tapestry5.services.LibraryMapping;
 import org.apache.tapestry5.services.javascript.JavaScriptStack;
+import org.got5.tapestry5.jquery.mobile.services.javascript.JQueryMobileDateFieldStack;
 import org.got5.tapestry5.jquery.mobile.services.javascript.JQueryMobileJavaScriptStack;
 
 
@@ -35,9 +36,13 @@ public class JQueryMobileModule
 {
     public static void contributeJavaScriptStackSource(MappedConfiguration<String, JavaScriptStack> configuration)
     {
+    	configuration.addInstance(JQueryMobileDateFieldStack.STACK_ID, JQueryMobileDateFieldStack.class);
     	configuration.addInstance(JQueryMobileJavaScriptStack.STACK_ID, JQueryMobileJavaScriptStack.class); 
+        
+        
     }
 
+    
     public static void contributeComponentClassTransformWorker(OrderedConfiguration<ComponentClassTransformWorker> configuration)
     {
      }
