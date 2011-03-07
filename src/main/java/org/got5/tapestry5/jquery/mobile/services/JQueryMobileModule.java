@@ -45,11 +45,20 @@ public class JQueryMobileModule
     
     public static void contributeComponentClassTransformWorker(OrderedConfiguration<ComponentClassTransformWorker> configuration)
     {
-     }
+    	
+    }
 
     public static void contributeComponentClassResolver(Configuration<LibraryMapping> configuration)
     {
         configuration.add(new LibraryMapping("jquery-mobile", "org.got5.tapestry5.jquery.mobile"));
+    }
+
+    public static void contributeApplicationDefaults(MappedConfiguration<String,String> configuration)
+    {
+      configuration.add(SymbolConstants.SUPPORTED_LOCALES, "en,fr,de");
+      configuration.add(SymbolConstants.FILE_CHECK_INTERVAL, "10 m");
+      //to allow Native jQueryNavigation
+      configuration.add(SymbolConstants.SUPPRESS_REDIRECT_FROM_ACTION_REQUESTS, "false");
     }
 
   

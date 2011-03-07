@@ -14,7 +14,7 @@
 		
 		<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
 			<li data-role="list-divider">Overview</li>
-			<li><a href="/intro" rel="external" t:type="pagelink" t:page="intro">Intro</a></li>
+			<li><a href="/intro"  t:type="pagelink" t:page="intro">Intro</a></li>
 			<li><a href="#features">Features</a></li>
 
 			<li><a href="#accessibility">Accessibility </a></li>
@@ -35,8 +35,8 @@
 			<li data-role="list-divider">Components</li>
 
 			<li><a href="http://jquerymobile.com/demos/1.0a3/#docs/pages/index.html">Pages &amp; dialogs *</a></li>
-			<li><a href="toolbars/index" rel="external" t:type="pagelink" t:page="toolbars">Toolbars</a></li>
-			<li><a href="buttons/index" rel="external" t:type="pagelink" t:page="buttons">Buttons</a></li>
+			<li><a href="toolbars/index" t:type="pagelink" t:page="toolbars">Toolbars</a></li>
+			<li><a href="buttons/index"  t:type="pagelink" t:page="buttons">Buttons</a></li>
 			<li><a href="http://jquerymobile.com/demos/1.0a3/#docs/content/index.html">Content formatting * </a></li>
 			<li><a href="http://jquerymobile.com/demos/1.0a3/#docs/forms/index.html" rel="external">Form elements *</a></li>
 
@@ -44,8 +44,8 @@
 		</ul>
 		<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
 			<li data-role="list-divider">Tapestry 5.2.4</li>
-		    <li><a href="test_navbar" rel="external">Simple Navbar in action</a></li>
-		    <li><a href="test_datefield" rel="external">DateFieldMobile</a></li>
+		    <li><a href="test_navbar"  >Simple Navbar in action</a></li>
+		    <li><a href="test_datefield" >DateFieldMobile</a></li>
 		</ul>
 	</div>
 </div>
