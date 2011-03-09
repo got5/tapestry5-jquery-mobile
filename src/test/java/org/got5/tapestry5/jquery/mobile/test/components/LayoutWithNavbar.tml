@@ -1,0 +1,17 @@
+<html lang="en" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+    <head>
+        <meta charset="utf-8" />
+        <title>Tapestry 5 jQuery Mobile - ${pageTitle}</title>
+    </head>
+    <body>
+    	<div data-role="page">
+			<div data-role="header">
+	        	<h1>NavBar Layout</h1>       
+	    	</div>
+	    	<t:jquery-mobile.NavBar t:navBarItems="prop:navBarItems" />
+	    	<div data-role="content">
+				<t:body />
+			</div>
+		</div>
+	</body>
+</html>

@@ -7,7 +7,7 @@
 
     <div data-role="header" data-theme="b" >
         <h1>Toolbars</h1>
-        <a  href="/index" rel="external" t:type="pagelink" t:page="index" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home">Home</a>
+        <a  href="/index" t:type="pagelink" t:page="index" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home">Home</a>
     </div><!-- /header -->
 
     <div data-role="content">
@@ -17,7 +17,7 @@
             
         <ul data-role="listview" data-inset="true">
             <li><a href="http://jquerymobile.com/demos/1.0a3/#docs/toolbars/docs-bars.html">Toolbar basics (jQuery Site)</a></li>
-            <li><a href="toolbars/docs_headers" rel="external">Header bars</a></li>
+            <li><a href="toolbars/docs_headers" >Header bars</a></li>
             <li><a href="http://jquerymobile.com/demos/1.0a3/#docs/toolbars/docs-footers.html">Footer bars (jQuery Site)</a></li>
             <li><a href="#docs_navbar">Navbars</a></li>
             <li><a href="http://jquerymobile.com/demos/1.0a3/#docs/toolbars/bars-fixed.html">Fixed positioning (jQuery Site)</a></li>

@@ -1,0 +1,30 @@
+<container xmlns="http://www.w3.org/1999/xhtml" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+<div data-role="footer">    
+<div data-role="navbar" data-theme="e">
+ <ul>
+ 	<t:loop source="navBarItems" t:value="prop:currentElement" t:index="prop:currentBarIndex">
+ 		<t:if test="prop:barOn">
+ 			<li>
+		 		<t:if test="prop:link">
+		 			<t:pageLink page="${prop:currentElement.pageName}" class="ui-btn-active" data-icon="${prop:currentElement.icon}" data-iconpos="${prop:currentElement.iconPos}" data-theme="${prop:currentElement.theme}">${prop:currentElement.title}</t:pageLink>
+		 		</t:if>
+		 		<t:unless test="prop:link">
+		 			<a href="${prop:pageLinkWithHash}" class="ui-btn-active" data-icon="${prop:currentElement.icon}" data-iconpos="${prop:currentElement.iconPos}" data-theme="${prop:currentElement.theme}">${prop:currentElement.title}</a>
+		 		</t:unless>	
+ 			</li>     		
+ 		</t:if>
+        <t:unless test="prop:barOn">
+  			<li>
+	  			<t:if test="prop:link">
+		 			<t:pageLink page="${prop:currentElement.pageName}" data-icon="${prop:currentElement.icon}" data-iconpos="${prop:currentElement.iconPos}" data-theme="${prop:currentElement.theme}">${prop:currentElement.title}</t:pageLink>
+		 		</t:if>
+		 		<t:unless test="prop:link">
+		 			<a href="${prop:pageLinkWithHash}" data-icon="${prop:currentElement.icon}" data-iconpos="${prop:currentElement.iconPos}" data-theme="${prop:currentElement.theme}">${prop:currentElement.title}</a>
+		 		</t:unless>
+ 			</li> 
+  		</t:unless>
+     </t:loop>   
+</ul>    
+</div><!-- /navbar -->
+</div><!-- /footer -->
+</container>

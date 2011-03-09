@@ -31,6 +31,7 @@ public class AppModule
         configuration.add(SymbolConstants.PRODUCTION_MODE, "false");
         configuration.add(SymbolConstants.COMBINE_SCRIPTS, "false");
         configuration.add(SymbolConstants.GZIP_COMPRESSION_ENABLED, "false");
+        configuration.add(SymbolConstants.SUPPORTED_LOCALES, "en,fr,de");
     }
 
 }

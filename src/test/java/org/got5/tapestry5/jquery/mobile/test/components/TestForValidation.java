@@ -16,10 +16,17 @@
 
 package org.got5.tapestry5.jquery.mobile.test.components;
 
+import org.apache.tapestry5.EventConstants;
+import org.apache.tapestry5.annotations.Component;
+import org.apache.tapestry5.annotations.InjectPage;
+import org.apache.tapestry5.annotations.OnEvent;
 import org.apache.tapestry5.annotations.Property;
+import org.apache.tapestry5.corelib.components.Form;
+import org.apache.tapestry5.internal.structure.Page;
 
 public class TestForValidation
 {
+	
     @Property
     private String foo;
 
@@ -31,4 +38,13 @@ public class TestForValidation
     
     @Property
     private String regexp;
+    
+    /*@Component(id="validationForm")
+    private Form _validationForm;*/
+    
+    @OnEvent(value = EventConstants.SUCCESS)
+    Object onSuccess()
+    {
+    	return null;
+    }
 }

@@ -16,13 +16,20 @@
 
 package org.got5.tapestry5.jquery.mobile.test.components;
 
+import java.util.Date;
+
 import org.apache.tapestry5.Block;
 import org.apache.tapestry5.EventConstants;
 import org.apache.tapestry5.ajax.MultiZoneUpdate;
+import org.apache.tapestry5.annotations.Component;
 import org.apache.tapestry5.annotations.InjectComponent;
 import org.apache.tapestry5.annotations.OnEvent;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
+import org.apache.tapestry5.corelib.components.DateField;
+import org.apache.tapestry5.corelib.components.Form;
+import org.apache.tapestry5.corelib.components.TextField;
+import org.apache.tapestry5.corelib.components.Zone;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.Request;
 
@@ -38,8 +45,6 @@ public class TestForZone
     @Inject
     private Block myBlockActionLink;
 
-    @Inject
-    private Block myBlockForm;
     
     @Inject
     private Block defaultBlock, multiUpdateBlock;
@@ -56,16 +61,24 @@ public class TestForZone
     
     @Property
     private int blockId;
+    
+    @Component(id="myForm")
+    private Form myForm;
+    
+    @Component(id="textFieldDummy", parameters ={"validate=required"})
+	private TextField tf;
+    
+    @Component(id="formZone")
+    private Zone formZone;
+    
+    @Component(id="formZoneResult")
+    private Zone formZoneResult;
 
     public Block getTheBlockActionLink()
     {
 	return myBlockActionLink;
     }
 
-    public Block getTheBlockForm()
-    {
-	return myBlockForm;
-    }
     
     @OnEvent(value = "action", component = "myActionLink")
     Object updateCount()
@@ -77,16 +90,31 @@ public class TestForZone
 	count++;
 	return myBlockActionLink;
     }
+    
+    void onValidateForm() {
+		
+		if (dummy.trim().equals("dummy")) {
+			myForm.recordError(tf, "dummy is not allowed");
+		}
+	}
+
+	
+	Object onFailure() {
+		MultiZoneUpdate zoneUpdate =  new MultiZoneUpdate(formZoneResult).add(formZone);
+		return zoneUpdate;
+		
+	}
 
     @OnEvent(value = EventConstants.SUCCESS, component = "myForm")
     Object updateZoneContentFromForm()
     {
-	if (!request.isXHR())
-	{
-	    return this;
-	}
+		if (!request.isXHR())
+		{
+		    return this;
+		}
 
-	return myBlockForm;
+		MultiZoneUpdate zoneUpdate =  new MultiZoneUpdate(formZoneResult).add(formZone);
+		return zoneUpdate;
     }
     
     @OnEvent(value = EventConstants.SUCCESS, component = "myMultiZoneUpdateForm")

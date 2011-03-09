@@ -1,0 +1,68 @@
+<html t:type="jquery-mobile/Xhtmllayout" t:pageTitle="Toolbars !"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" 
+      xmlns:p="tapestry:parameter">
+      
+<div data-role="page" id="Zone">
+
+    <div data-role="header" data-theme="b">
+        <h1>Header bars</h1>
+        <a href="toolbars/Index" t:type="pagelink" t:page="toolbars/Index" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home">Home</a>
+    </div><!-- /header -->
+
+    <div data-role="content">
+       	<t:jquery-mobile.NavBar t:navBarItems="prop:navBarItems" t:activeBarIndex="0"/> 
+     	<t:TestForZone />
+
+    </div><!-- /content -->
+</div><!-- /page -->
+
+
+<div data-role="page" id="Validation">
+
+    <div data-role="header" data-theme="b">
+        <h1>Header bars</h1>
+        <a href="toolbars/Index"  t:type="pagelink" t:page="toolbars/Index" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home">Home</a>
+    </div><!-- /header -->
+
+    <div data-role="content">
+        
+       <t:jquery-mobile.NavBar t:navBarItems="prop:navBarItems" t:activeBarIndex="1"/> 
+       <t:TestForValidation />
+   
+    
+    </div><!-- /content -->
+</div><!-- /page -->
+
+<div data-role="page" id="Autocomplete">
+
+    <div data-role="header" data-theme="b">
+        <h1>Header bars</h1>
+        <a href="toolbars/Index"  t:type="pagelink" t:page="toolbars/Index" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home">Home</a>
+    </div><!-- /header -->
+
+    <div data-role="content">
+        
+       <t:jquery-mobile.NavBar t:navBarItems="prop:navBarItems" t:activeBarIndex="2"/>
+		Not Working yet
+    	<!--  t:TestForAutocomplete /-->
+
+    </div><!-- /content -->
+</div><!-- /page -->
+
+<div data-role="page" id="FormFragment">
+
+    <div data-role="header" data-theme="c">
+        <h1>Header bars</h1>
+        <a href="toolbars/Index"  t:type="pagelink" t:page="toolbars/Index" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home">Home</a>
+    </div><!-- /header -->
+
+    <div data-role="content">
+        
+       <t:jquery-mobile.NavBar t:navBarItems="prop:navBarItems" t:activeBarIndex="3"/> 
+       Not Working yet	
+       <t:TestForFormFragment />
+
+    </div><!-- /content -->
+</div><!-- /page -->
+    
+</html>

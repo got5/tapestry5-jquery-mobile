@@ -20,13 +20,36 @@ import static org.got5.tapestry5.jquery.mobile.JQueryMobileSymbolConstants.JQUER
 import static org.got5.tapestry5.jquery.mobile.JQueryMobileSymbolConstants.JQUERY_MOBILE_VERSION;
 
 
+import org.apache.tapestry5.Link;
+import org.apache.tapestry5.StreamResponse;
+import org.apache.tapestry5.SymbolConstants;
+import org.apache.tapestry5.ajax.MultiZoneUpdate;
 import org.apache.tapestry5.internal.InternalConstants;
+import org.apache.tapestry5.internal.services.AjaxComponentInstanceEventResultProcessor;
+import org.apache.tapestry5.internal.services.AjaxLinkComponentEventResultProcessor;
+import org.apache.tapestry5.internal.services.AjaxPageClassComponentEventResultProcessor;
+import org.apache.tapestry5.internal.services.AjaxPageNameComponentEventResultProcessor;
+import org.apache.tapestry5.internal.services.ComponentInstanceProcessor;
+import org.apache.tapestry5.internal.services.JSONArrayEventResultProcessor;
+import org.apache.tapestry5.internal.services.JSONObjectEventResultProcessor;
+import org.apache.tapestry5.internal.services.RenderCommandComponentEventResultProcessor;
+import org.apache.tapestry5.internal.services.StreamResponseResultProcessor;
 import org.apache.tapestry5.ioc.Configuration;
 import org.apache.tapestry5.ioc.MappedConfiguration;
 import org.apache.tapestry5.ioc.OrderedConfiguration;
+import org.apache.tapestry5.ioc.annotations.Contribute;
+import org.apache.tapestry5.json.JSONArray;
+import org.apache.tapestry5.json.JSONObject;
+import org.apache.tapestry5.runtime.Component;
+import org.apache.tapestry5.runtime.RenderCommand;
+import org.apache.tapestry5.services.Ajax;
 import org.apache.tapestry5.services.ComponentClassTransformWorker;
+import org.apache.tapestry5.services.ComponentEventResultProcessor;
 import org.apache.tapestry5.services.LibraryMapping;
+import org.apache.tapestry5.services.Traditional;
+import org.apache.tapestry5.services.ajax.MultiZoneUpdateEventResultProcessor;
 import org.apache.tapestry5.services.javascript.JavaScriptStack;
+import org.got5.tapestry5.jquery.mobile.components.JQMPage;
 import org.got5.tapestry5.jquery.mobile.services.javascript.JQueryMobileDateFieldStack;
 import org.got5.tapestry5.jquery.mobile.services.javascript.JQueryMobileJavaScriptStack;
 
@@ -55,8 +78,6 @@ public class JQueryMobileModule
 
     public static void contributeApplicationDefaults(MappedConfiguration<String,String> configuration)
     {
-      configuration.add(SymbolConstants.SUPPORTED_LOCALES, "en,fr,de");
-      configuration.add(SymbolConstants.FILE_CHECK_INTERVAL, "10 m");
       //to allow Native jQueryNavigation
       configuration.add(SymbolConstants.SUPPRESS_REDIRECT_FROM_ACTION_REQUESTS, "false");
     }
@@ -68,6 +89,7 @@ public class JQueryMobileModule
        
         configuration.add(JQUERY_MOBILE_CORE_PATH, "classpath:org/got5/tapestry5/jquery/mobile/jquery.mobile_core");
         configuration.add(JQUERY_MOBILE_VERSION, "1.0a3");
+      
     }
     
     public static void contributeClasspathAssetAliasManager(MappedConfiguration<String, String> configuration)
@@ -75,6 +97,22 @@ public class JQueryMobileModule
         configuration.add("tap-jquery-mobile", "org/got5/tapestry5");
     }
     
-   
+    /*@Contribute(ComponentEventResultProcessor.class)
+    @Ajax
+    public static void ContributeComponentEventResultProcessors(
+            MappedConfiguration<Class, ComponentEventResultProcessor> configuration)
+    {
+        configuration.addInstance(JQMPage.class, jQueryMobilePageComponentEventResultProcessor.class);
+    }
+
+    public void contributeComponentEventResultProcessor(@Ajax
+    	    @ComponentInstanceProcessor
+    	    ComponentEventResultProcessor componentInstanceProcessor,
+
+    	    MappedConfiguration<Class, ComponentEventResultProcessor> configuration)
+    {
+    	  configuration.addInstance(JQMPage.class, jQueryMobilePageComponentEventResultProcessor.class);
+    	  
+    }*/
 
 }

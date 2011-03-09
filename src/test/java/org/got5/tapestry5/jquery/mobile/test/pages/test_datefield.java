@@ -20,11 +20,15 @@ import java.util.Date;
 
 import org.apache.tapestry5.Block;
 import org.apache.tapestry5.EventConstants;
+import org.apache.tapestry5.annotations.Component;
 import org.apache.tapestry5.annotations.Import;
 import org.apache.tapestry5.annotations.OnEvent;
 import org.apache.tapestry5.annotations.Property;
+import org.apache.tapestry5.corelib.components.Form;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.Request;
+import org.got5.tapestry5.jquery.mobile.components.DateFieldMobile;
+import org.got5.tapestry5.jquery.mobile.components.JQMPage;
 
 @Import(stylesheet={"context:/css/jqm-docs.css"})
 public class test_datefield
@@ -33,9 +37,17 @@ public class test_datefield
 	 @Property
 	 private Date date;
 	 
+	 @Component(parameters={ "pageName=detail" })
+	 private JQMPage detail;
 	 
 	 @Inject
 	 private Block blockForm;
+	 
+	 @Component
+	 private Form testDate;
+	 
+	 @Component(id = "date")
+	 private DateFieldMobile dfm;
 	 
 	 @Inject
 	 private Request request;
@@ -46,14 +58,24 @@ public class test_datefield
 	 }
 	 
 	 @OnEvent(value = EventConstants.SUCCESS, component = "testDate")
-	    Object updateZoneContentFromForm()
-	    {
+	 Object updateZoneContentFromForm()
+	 {
+		Date now = new Date(); 
+		if(date.before(now))
+		{
+			testDate.recordError(dfm, "must be later than now");
+			return null;
+		}	
+		 
+		 
 		if (!request.isXHR())
 		{
 		    return this;
 		}
 
-		return blockForm;
-	    }
+		
+	 //return blockForm;
+	 return detail.redirectToMe();
+	 }
 	 
 }

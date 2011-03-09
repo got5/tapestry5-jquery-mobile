@@ -2,7 +2,7 @@
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" 
       xmlns:p="tapestry:parameter">
       
-<div data-role="page">
+<div data-role="page" id="form">
 
     <div data-role="header">
         <h1>jQuery UI's Datepicker Styled for mobile</h1>       
@@ -14,7 +14,7 @@
         </p>
         
         <t:form t:id="testDate" t:zone="zoneToRefresh">
-        	<t:jquery-mobile.DateFieldMobile t:value="date" />
+        	<t:jqm.DateFieldMobile t:id="date" t:value="date" />
 			<t:submit t:value="submit" />
     	</t:form>
     	
@@ -32,5 +32,22 @@
     </div>
     
 </div>
+
+<t:jquery-mobile.JQMPage t:id="detail">
+
+    <div data-role="header">
+        <h1>jQuery UI's Datepicker Styled for mobile</h1>       
+    </div>
+    
+    <div data-role="content">
+    
+        		<p>
+            		Date value is : ${date}
+        		</p>
+     </div>
+    
+</t:jquery-mobile.JQMPage>
+
+
     
 </html>

@@ -14,11 +14,15 @@
 // limitations under the License.
 //
 
-package org.got5.tapestry5.jquery.mobile.test.pages;
+package org.got5.tapestry5.jquery.mobile.test.pages.navbar;
 
-import org.apache.tapestry5.annotations.Import;
+import java.util.Date;
+import org.apache.tapestry5.annotations.Property;
 
-@Import(stylesheet={"context:/css/jqm-docs.css"})
-public class test_navbar
+
+public class Calendar
 {
+	 @Property
+	 private Date date;
+	 
 }

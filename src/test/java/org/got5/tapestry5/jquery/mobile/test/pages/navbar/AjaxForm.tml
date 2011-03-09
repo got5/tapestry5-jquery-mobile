@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
-<t:container xmlns="http://www.w3.org/1999/xhtml" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
-<h3>Triggered by action link</h3>
+<container t:type="LayoutWithNavbar" t:pageTitle="Toolbars !"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" 
+      xmlns:p="tapestry:parameter">
+      
+   
+    <h3>Triggered by action link</h3>
     <p>
         <t:actionlink t:id="myActionLink" t:zone="myZone">
             Refresh
@@ -23,7 +26,7 @@
 	    	<t:errors/>
 	        <t:textfield t:id="textFieldDummy" id="textFieldDummy" t:value="dummy"/>
 	        (dummy not allowed)
-	        <t:submit t:id="submit" t:value="Submit"/>
+	        <t:submit t:id="submit" value="Submit"/>
 	    </t:form>
     </t:zone>
     
@@ -34,7 +37,7 @@
     </t:zone>
     
     <t:form t:zone="multiZone1" t:id="myMultiZoneUpdateForm">
-        <t:submit t:id="multiSubmit" t:value="Multi Zone Update" />
+        <t:submit t:id="multiSubmit" value="Multi Zone Update" />
     </t:form>
     <t:zone t:id="multiZone1">
         <t:delegate to="multiUpdateBlock1" />
@@ -48,4 +51,6 @@
     <t:block t:id="multiUpdateBlock">
         <p>rendering block-${blockId} after multi zone update</p>
     </t:block>
-</t:container>
+        
+       
+</container>

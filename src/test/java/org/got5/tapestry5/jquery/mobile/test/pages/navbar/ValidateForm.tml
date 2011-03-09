@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
-<t:container xmlns="http://www.w3.org/1999/xhtml" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd">
+<container t:type="LayoutWithNavbar" t:pageTitle="Toolbars !"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" 
+      xmlns:p="tapestry:parameter">
+      
     <form t:type="form" t:id="validationForm" id="validationForm" >
     	<t:errors />
 		
@@ -16,8 +18,10 @@
             <t:textfield t:value="regexp" t:validate="required, regexp=.*foo.*" t:id="field4" />
         </p>
         <p>
-            <t:submit t:id="submit" t:value="Submit"/>
+            <t:submit t:id="submit" value="Submit"/>
         </p>
         
     </form>
-</t:container>
+        
+       
+</container>
