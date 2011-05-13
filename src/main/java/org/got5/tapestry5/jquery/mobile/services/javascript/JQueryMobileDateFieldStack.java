@@ -82,7 +82,7 @@ public class JQueryMobileDateFieldStack implements JavaScriptStack
             javaScriptStack = F
                     .flow("${jquery.mobile.core.path}/datefield/datefield.mobile.js",
                     	  "${jquery.mobile.core.path}/datefield/jquery.ui.datepicker.js",
-                    	  "${jquery.mobile.core.path}/datefield/jquery.ui.datepicker.mobile-${jquery.mobile.version}.js")
+                    	  "${jquery.mobile.core.path}/datefield/jquery.ui.datepicker.mobile.js")
                     .map(pathToAsset).toList();
 
         } else {
@@ -90,7 +90,7 @@ public class JQueryMobileDateFieldStack implements JavaScriptStack
         	 javaScriptStack = F
              .flow("${jquery.mobile.core.path}/datefield/datefield.mobile.js",
              	   "${jquery.mobile.core.path}/datefield/jquery.ui.datepicker.js",
-             	   "${jquery.mobile.core.path}/datefield/jquery.ui.datepicker.mobile-${jquery.mobile.version}.js")
+             	   "${jquery.mobile.core.path}/datefield/jquery.ui.datepicker.mobile.js")
              .map(pathToAsset).toList();
         }
 

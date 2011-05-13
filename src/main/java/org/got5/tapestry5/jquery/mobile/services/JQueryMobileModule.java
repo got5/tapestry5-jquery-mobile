@@ -88,8 +88,7 @@ public class JQueryMobileModule
     {
        
         configuration.add(JQUERY_MOBILE_CORE_PATH, "classpath:org/got5/tapestry5/jquery/mobile/jquery.mobile_core");
-        configuration.add(JQUERY_MOBILE_VERSION, "1.0a3");
-      
+        configuration.add(JQUERY_MOBILE_VERSION, "1.0a4.1");
     }
     
     public static void contributeClasspathAssetAliasManager(MappedConfiguration<String, String> configuration)
