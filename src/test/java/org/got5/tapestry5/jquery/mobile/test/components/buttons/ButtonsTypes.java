@@ -1,5 +1,5 @@
 package org.got5.tapestry5.jquery.mobile.test.components.buttons;
 
-public class buttons_types {
+public class ButtonsTypes {
 
 }

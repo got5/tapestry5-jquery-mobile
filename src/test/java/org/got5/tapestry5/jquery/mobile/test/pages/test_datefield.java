@@ -31,7 +31,7 @@ import org.got5.tapestry5.jquery.mobile.components.DateFieldMobile;
 import org.got5.tapestry5.jquery.mobile.components.JQMPage;
 
 @Import(stylesheet={"context:/css/jqm-docs.css"})
-public class test_datefield
+public class Test_datefield
 {
 	
 	 @Property
