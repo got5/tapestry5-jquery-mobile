@@ -1,0 +1,26 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" 
+      xmlns:p="tapestry:parameter">
+<body>
+	<div data-role="page" id="foo"> 
+ 
+	<div data-role="header"> 
+		<h1>Foo</h1> 
+	</div><!-- /header --> 
+ 
+	<div data-role="content">
+			
+	<t:jquery-mobile.geolocation t:ajax="true" />
+	<div id="test">coucou</div>
+		<p>Here is your position :</p>		
+		<ul data-role="listview" id="positions"> 
+		</ul> 
+		<br/> 
+	</div><!-- /content --> 
+ 
+	<div data-role="footer"> 
+		<h4>Page Footer</h4> 
+	</div><!-- /header --> 
+</div><!-- /page --> 
+
+</body>
+</html>
