@@ -19,7 +19,7 @@
 			
 	<t:jquery-mobile.geolocation t:ajax="true" />
 	<div id="test">coucou</div>
-	<div id="map" t:type="jquery-mobile/map"/> 
+	<div id="map" t:type="jquery-mobile/map" t:config="config"/> 
 		<br/> 
 	</div><!-- /content --> 
  
