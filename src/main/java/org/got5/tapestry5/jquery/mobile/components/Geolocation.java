@@ -21,7 +21,7 @@ import org.got5.tapestry5.jquery.mobile.data.GeoPosition;
 import org.got5.tapestry5.jquery.mobile.services.javascript.JQueryMobileJavaScriptStack;
 import org.got5.tapestry5.jquery.utils.JQueryUtils;
 
-@Import(library="geolocation.js", stack=JQueryMobileJavaScriptStack.STACK_ID)
+@Import(library="jquery.geolocation.js", stack=JQueryMobileJavaScriptStack.STACK_ID)
 @Events(Geolocation.GEOLOCATION_EVENT)
 public class Geolocation {
 

@@ -1,5 +1,13 @@
 <html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" 
       xmlns:p="tapestry:parameter">
+<head>
+	<style type="text/css">
+		#map{
+			width:100%;
+			height:300px;
+		}
+	</style>
+</head>
 <body>
 	<div data-role="page" id="foo"> 
  
@@ -11,9 +19,7 @@
 			
 	<t:jquery-mobile.geolocation t:ajax="true" />
 	<div id="test">coucou</div>
-		<p>Here is your position :</p>		
-		<ul data-role="listview" id="positions"> 
-		</ul> 
+	<div id="map" t:type="jquery-mobile/map"/> 
 		<br/> 
 	</div><!-- /content --> 
  
