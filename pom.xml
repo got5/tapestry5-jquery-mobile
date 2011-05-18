@@ -78,7 +78,7 @@
 					<archive>
 						<manifestEntries>
 							<tapestry-module-classes>
-                                    org.got5.tapestry5.jquery.mobile.services.JQueryModule
+                                    org.got5.tapestry5.jquery.mobile.services.JQueryMobileModule
 							</tapestry-module-classes>
 						</manifestEntries>
 					</archive>
