@@ -1,13 +1,6 @@
 (function($){
 	$.extend(Tapestry.Initializer, { GeolocationToMap : function(params)
 	{
-		function displayOnMap(){
-			var marker = new google.maps.Marker({
-				'position':new google.maps.LatLng(poi.latitude, poi.longitude)
-		});
-		$map.trigger("map_beforeAddingMarker", [poi, marker, $map.gmap("getMap")]);
-		$map.gmap("addMarker", marker );
-		}
 		$(document).bind("positionFoundAfterAjax", 
 				function(event, data){
 					var $map = $("#"+params.mapId);
