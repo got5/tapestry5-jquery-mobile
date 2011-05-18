@@ -1,0 +1,4 @@
+<div xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+	<t:jquery-mobile.geolocation t:ajax="true" t:config="inherit:geolocConfiguration"/>
+	<t:jquery-mobile.map t:config="inherit:mapConfiguration" t:id="map"/> 
+</div>

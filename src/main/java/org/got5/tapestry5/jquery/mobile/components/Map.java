@@ -4,7 +4,6 @@ import org.apache.tapestry5.ComponentResources;
 import org.apache.tapestry5.MarkupWriter;
 import org.apache.tapestry5.annotations.BeginRender;
 import org.apache.tapestry5.annotations.Environmental;
-import org.apache.tapestry5.annotations.Import;
 import org.apache.tapestry5.annotations.Parameter;
 import org.apache.tapestry5.annotations.SetupRender;
 import org.apache.tapestry5.ioc.annotations.Inject;
@@ -62,19 +61,23 @@ public class Map {
     @SetupRender
 	void setupRender(MarkupWriter writer)
     {
-		 
-		id = jsSupport.allocateClientId(_resources.getId());
         
         _resources.renderInformalParameters(writer);
 
         if(!_resources.isBound("config"))
         	config = new JSONObject();
-        config.put("clientId", id);
+        config.put("clientId", getClientId());
         jsSupport.addInitializerCall("GMap", config);
     }
+	private String clientId;
 	
 	public String getClientId(){
-		return id;
+		if (clientId == null)  
+        {  
+            clientId = jsSupport.allocateClientId(_resources);  
+        }  
+  
+        return this.clientId;  
 	}
 	
 }

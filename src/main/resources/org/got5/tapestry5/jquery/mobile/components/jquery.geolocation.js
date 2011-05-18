@@ -18,6 +18,7 @@
 				$.ajax({
 					url:opts.url,
 					data:position.coords,
+					dataType:"json",
 					success:function(data){
 						$(document).trigger("positionFoundAfterAjax", data);
 					}

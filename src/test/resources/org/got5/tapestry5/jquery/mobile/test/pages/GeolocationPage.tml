@@ -17,9 +17,10 @@
  
 	<div data-role="content">
 			
-	<t:jquery-mobile.geolocation t:ajax="true" />
+	<!--t:jquery-mobile.geolocation t:ajax="true" />
 	<div id="test">coucou</div>
-	<div id="map" t:type="jquery-mobile/map" t:config="config"/> 
+	<div id="map" t:type="jquery-mobile/map" t:config="config"/-->
+	<t:jquery-mobile.geolocationToMap t:mapConfiguration="config"/> 
 		<br/> 
 	</div><!-- /content --> 
  
