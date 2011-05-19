@@ -4,11 +4,12 @@
 		marker.icon=poi.icon;
 		
 		//let's display an info window when the user click the marker
-		google.maps.event.addListener(marker, 'click', function() {
-			var infowindow = new google.maps.InfoWindow({
-			    content: poi.markerContent
+		map.gmap("addInfoWindow", {
+		    content: poi.markerContent
+		}, function(iw){
+			$(marker).click(function() {
+				iw.open(map.gmap("getMap"), marker);
 			});
-			infowindow.open(map,marker);
 		});
 	});
 })(jQuery)
