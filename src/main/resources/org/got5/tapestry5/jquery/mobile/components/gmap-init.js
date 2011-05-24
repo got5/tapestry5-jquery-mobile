@@ -1,7 +1,8 @@
 (function($){
 	$.extend(Tapestry.Initializer, { GMap: function(params)
 		{
-			$("#"+params.clientId).gmap(params);
+			var map = $("#"+params.clientId).gmap(params);
+			$(document).trigger("map-ready", map);
 		}
 });
 })
