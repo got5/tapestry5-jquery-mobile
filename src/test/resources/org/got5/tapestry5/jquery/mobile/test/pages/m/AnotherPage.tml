@@ -1,0 +1,22 @@
+<html t:type="jquery-mobile/layout" t:pageTitle="test it!"
+xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" 
+      xmlns:p="tapestry:parameter">
+<body>
+<div data-role="page" id="AnotherPage">
+
+    <div data-role="header" data-theme="b">
+        <h1>Features</h1>   
+        <a href="#jqm-home" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-right jqm-home">Home</a>
+    </div><!-- /header -->
+	
+    <div data-role="content">
+		this is another page !! the context is : ${ctx}<br/>	
+		And here is an example of autocomplete :
+		<t:form>
+			<t:textfield t:value="test" t:mixins="jquery/autocomplete"/>
+		</t:form>
+
+    </div><!-- /content -->    
+</div>
+</body>
+</html>

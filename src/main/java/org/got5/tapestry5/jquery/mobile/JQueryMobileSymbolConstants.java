@@ -31,6 +31,7 @@ public class JQueryMobileSymbolConstants {
      * <code>jquery.mobile-${jquery.version}.min.js</code>
      */
     public static final String JQUERY_MOBILE_VERSION = "jquery.mobile.version";
-
-   
+    
+    public static final String JQUERY_MOBILE_PAGES_SUBPACKAGE = "jquery.mobile.pages.subpackage";
+  
 }

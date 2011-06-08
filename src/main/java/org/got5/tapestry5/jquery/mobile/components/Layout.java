@@ -34,19 +34,37 @@ package org.got5.tapestry5.jquery.mobile.components;
 import org.apache.tapestry5.BindingConstants;
 import org.apache.tapestry5.ComponentResources;
 import org.apache.tapestry5.MarkupWriter;
+import org.apache.tapestry5.annotations.AfterRender;
 import org.apache.tapestry5.annotations.Import;
 import org.apache.tapestry5.annotations.Parameter;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.annotations.SetupRender;
 import org.apache.tapestry5.ioc.annotations.Inject;
-import org.got5.tapestry5.jquery.mobile.services.javascript.JQueryMobileJavaScriptStack;;
+import org.apache.tapestry5.services.Request;
+import org.apache.tapestry5.services.javascript.JavaScriptSupport;
+import org.got5.tapestry5.jquery.mobile.services.JQMobilePageIdentifier;
+import org.got5.tapestry5.jquery.mobile.services.javascript.JQueryMobileJavaScriptStack;
 
-@Import(stack = JQueryMobileJavaScriptStack.STACK_ID)
+//@Import(stack = JQueryMobileJavaScriptStack.STACK_ID)
 public class Layout
 {
 	@SuppressWarnings("unused")
 	@Property
     private String pageName;
+	
+	@Inject
+	private Request request;
+	
+	/*
+	 * If true, then the JQueryMobileJavaScriptStack will be loaded each time
+	 * If false (default), the stack won't be loaded if the request is an AJAX request and the page 
+	 * is located in the pages.jquerymobilepages subpackage
+	 */
+	@Parameter(value="false")
+	private boolean forceJsStackLoad;
+	
+	@Inject
+	private JavaScriptSupport support;
 
     @SuppressWarnings("unused")
     @Property
@@ -55,6 +73,9 @@ public class Layout
 
     @Inject
     private ComponentResources resources;
+    
+    @Inject
+    private JQMobilePageIdentifier jQMobilePageIdentifier;
 
     @SetupRender
     void init(final MarkupWriter writer)
@@ -63,5 +84,15 @@ public class Layout
         this.pageName = resources.getPageName();
     }
     
+    @AfterRender
+    public void afterRender(){
+		if(forceJsStackLoad)
+			support.importStack(JQueryMobileJavaScriptStack.STACK_ID);
+		else 
+			if(!jQMobilePageIdentifier.isJQMobilePage())
+				support.importStack(JQueryMobileJavaScriptStack.STACK_ID);
+				
+    	//ATTENTION A L'ANNOTATION IMPORT !!!
+    }
 
 }

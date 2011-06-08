@@ -19,8 +19,8 @@ package org.got5.tapestry5.jquery.mobile.test.services;
 import org.apache.tapestry5.SymbolConstants;
 import org.apache.tapestry5.ioc.MappedConfiguration;
 import org.apache.tapestry5.ioc.annotations.SubModule;
+import org.got5.tapestry5.jquery.mobile.JQueryMobileSymbolConstants;
 import org.got5.tapestry5.jquery.mobile.services.JQueryMobileModule;
-
 
 
 @SubModule(value = JQueryMobileModule.class)
@@ -32,6 +32,7 @@ public class AppModule
         configuration.add(SymbolConstants.COMBINE_SCRIPTS, "false");
         configuration.add(SymbolConstants.GZIP_COMPRESSION_ENABLED, "false");
         configuration.add(SymbolConstants.SUPPORTED_LOCALES, "en,fr,de");
+        //configuration.add(JQueryMobileSymbolConstants.JQUERY_MOBILE_PAGES_SUBPACKAGE, "");
     }
 
 }
