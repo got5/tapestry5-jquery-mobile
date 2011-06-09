@@ -16,9 +16,6 @@
 
 package org.got5.tapestry5.jquery.mobile.services;
 
-import org.got5.tapestry5.jquery.mobile.JQueryMobileSymbolConstants;
-//import static org.got5.tapestry5.jquery.mobile.JQueryMobileSymbolConstants.JQUERY_MOBILE_VERSION;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.reflect.Method;
@@ -57,6 +54,7 @@ import org.apache.tapestry5.services.Response;
 import org.apache.tapestry5.services.javascript.JavaScriptStack;
 import org.apache.tapestry5.services.javascript.JavaScriptStackSource;
 import org.apache.tapestry5.services.javascript.JavaScriptSupport;
+import org.got5.tapestry5.jquery.mobile.JQueryMobileSymbolConstants;
 import org.got5.tapestry5.jquery.mobile.services.javascript.JQueryMobileDateFieldStack;
 import org.got5.tapestry5.jquery.mobile.services.javascript.JQueryMobileJavaScriptStack;
 import org.slf4j.Logger;

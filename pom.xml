@@ -210,6 +210,6 @@
 	</repositories>
 
 	<properties>
-		<tapestry-release-version>5.2.4</tapestry-release-version>
+		<tapestry-release-version>5.2.5</tapestry-release-version>
 	</properties>
 </project>
