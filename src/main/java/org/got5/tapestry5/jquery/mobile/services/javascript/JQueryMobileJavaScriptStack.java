@@ -62,23 +62,23 @@ public class JQueryMobileJavaScriptStack implements JavaScriptStack {
 
         if (productionMode) {
         	
-        	stylesheetStack = F.flow("${jquery.mobile.core.path}/jquery-${jquery.mobile.version}/jquery.mobile-${jquery.mobile.version}.min.css")
+        	stylesheetStack = F.flow("${jquery.mobile.core.path}/jquery.mobile-${jquery.mobile.version}/jquery.mobile-${jquery.mobile.version}.min.css")
         	.map(pathToStylesheetLink).toList();
 
             javaScriptStack = F
                 .flow("${jquery.mobile.core.path}/jquery.mobile.init.js",
-                	  "${jquery.mobile.core.path}/jquery-${jquery.mobile.version}/jquery.mobile-${jquery.mobile.version}.min.js",
+                	  "${jquery.mobile.core.path}/jquery.mobile-${jquery.mobile.version}/jquery.mobile-${jquery.mobile.version}.min.js",
                 	  "${jquery.mobile.core.path}/zone/zone.mobile.js")
             .map(pathToAsset).toList();
 
         } else {
         	
-        	stylesheetStack = F.flow("${jquery.mobile.core.path}/jquery-${jquery.mobile.version}/jquery.mobile-${jquery.mobile.version}.css")
+        	stylesheetStack = F.flow("${jquery.mobile.core.path}/jquery.mobile-${jquery.mobile.version}/jquery.mobile-${jquery.mobile.version}.css")
         	.map(pathToStylesheetLink).toList();
 
             javaScriptStack = F
                 .flow(  "${jquery.mobile.core.path}/jquery.mobile.init.js",
-                		"${jquery.mobile.core.path}/jquery-${jquery.mobile.version}/jquery.mobile-${jquery.mobile.version}.js",
+                		"${jquery.mobile.core.path}/jquery.mobile-${jquery.mobile.version}/jquery.mobile-${jquery.mobile.version}.js",
                 		"${jquery.mobile.core.path}/zone/zone.mobile.js")
             .map(pathToAsset).toList();
 
