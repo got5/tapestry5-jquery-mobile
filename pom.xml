@@ -194,6 +194,10 @@
 
 		<!-- TODO: remove when 5.3 hits central -->
 		<repository>
+            <id>apache-staging</id>
+            <url>https://repository.apache.org/content/groups/staging/</url>
+        </repository>
+		<repository>
 			<id>apache-snapshots2</id>
 			<url>https://repository.apache.org/content/groups/public</url>
 		</repository>
@@ -210,6 +214,6 @@
 	</repositories>
 
 	<properties>
-		<tapestry-release-version>5.3-SNAPSHOT</tapestry-release-version>
+		<tapestry-release-version>5.3-Beta-9</tapestry-release-version>
 	</properties>
 </project>
