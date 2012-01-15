@@ -92,7 +92,7 @@ public class JQueryMobileModule
     {
        
         configuration.add(JQueryMobileSymbolConstants.JQUERY_MOBILE_CORE_PATH, "classpath:org/got5/tapestry5/jquery/mobile/jquery.mobile_core");
-        configuration.add(JQueryMobileSymbolConstants.JQUERY_MOBILE_VERSION, "1.0b1");
+        configuration.add(JQueryMobileSymbolConstants.JQUERY_MOBILE_VERSION, "1.0");
         configuration.add(JQueryMobileSymbolConstants.JQUERY_MOBILE_PAGES_SUBPACKAGE, "m");
     }
     

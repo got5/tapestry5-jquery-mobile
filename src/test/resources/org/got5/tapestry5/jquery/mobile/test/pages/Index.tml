@@ -43,7 +43,7 @@
 			<li><a href="docs/lists/index.html">List views</a></li>
 		</ul>
 		<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
-			<li data-role="list-divider">Tapestry 5.2.4</li>
+			<li data-role="list-divider">Tapestry 5.3.1</li>
 		    <li><a href="NavBarInSinglePage"  >Navbar Single Page</a></li>
 		    <li><a href="navbar/AjaxForm"  >Navbar Layout</a></li>
 		    <li><t:pagelink page="test_datefield" >DateFieldMobile</t:pagelink></li>
