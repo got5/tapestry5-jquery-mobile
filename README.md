@@ -1,7 +1,7 @@
-# Tapestry 5 jQuery Mobile integration Module - 3.1.0-SNAPSHOT
+# Tapestry 5 jQuery Mobile integration Module - 3.2.0-SNAPSHOT
 
 ## Changelog
-
+- 3.2.0-SNAPSHOT : upgrade to 5.3.2
 - 3.1.0-SNAPSHOT : initial snapshot 
 
 ## Features

@@ -13,4 +13,6 @@ tidyErrors.txt
 bin/
 pom-internal.xml
 .DS_Store
+.gradle
+build
 
